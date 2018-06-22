@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { SmartForm } from './form';
-import { SmartInput } from './input';
+import { SmartForm, SmartInput } from './SmartForm';
 
 export class Application extends Component {
     componentDidMount() {

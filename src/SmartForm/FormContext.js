@@ -3,5 +3,5 @@ import { noop } from '../utils';
 
 export const FormContext = React.createContext({
     values: {},
-    handleChangeCreator: noop,
+    handleChange: noop,
 });

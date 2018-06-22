@@ -12,13 +12,14 @@ export class SmartForm extends Component {
         values: {},
     };
 
-    handleInputChange = name => ev => {
+    handleInputChange = (ev) => {
         ev.persist();
+        const { target: { value, name } } = ev;
         this.setState(prevState => ({
             ...prevState,
             values: {
                 ...prevState.values,
-                [name]: ev.target.value,
+                [name]: value,
             },
         }));
     };
@@ -35,7 +36,7 @@ export class SmartForm extends Component {
             <FormContext.Provider
                 value={{
                     values,
-                    handleChangeCreator: this.handleInputChange,
+                    handleChange: this.handleInputChange,
                 }}
             >
                 <form onSubmit={this.handleSubmit}>
