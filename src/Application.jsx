@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { SmartForm, SmartInput } from './SmartForm';
+import { SmartForm, SmartInputExamples } from './SmartForm';
 
 export class Application extends Component {
   componentDidMount() {
@@ -12,8 +12,8 @@ export class Application extends Component {
         <SmartForm
           onSubmit={values => console.log(values)}
         >
-          <SmartInput.Text name="login" />
-          <SmartInput.Password name="password" />
+          <SmartInputExamples.Text name="login" />
+          <SmartInputExamples.Password name="password" />
           <button type="submit">
                         MAGIC!
           </button>
